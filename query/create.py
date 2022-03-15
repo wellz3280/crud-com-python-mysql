@@ -29,12 +29,12 @@ class Create:
             cursor.execute(sql)
             conn.commit()
 
-            print(f'{cursor.rowcount} linhas afetadas')
-
+            print(f'{cursor.rowcount} linha(s) afetadas')
+            cursor.close()
         except Error as erro:
 
             print(f'Falha ao inserir dados ao banco {erro}')
-            cursor.close()
+
         finally:
             if (conn.is_connected()):
                 conn.close()
