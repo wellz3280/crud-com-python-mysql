@@ -1,15 +1,11 @@
 from query.select import Select
+from query.create import Create
 
-name = input('Digite o nome do pet: ')
-show = Select('pets')
+data = {'name':'Malvadão','raca':'pintcher','idade':'18'}
+insert = Create('pets',data).get()
 
-all = show.all()
-thisOne = show.thisOne('2')
-row = len(thisOne)
 
-id,nome,raca,idade = all
 
-print(id,nome,raca,idade)
 # print(f'id: {thisOne[0]} ')
 # print(f'nome: {thisOne[1]} ')
 # print(f'raça: {thisOne[2]} ')
