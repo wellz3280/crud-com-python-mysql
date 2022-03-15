@@ -1,8 +1,11 @@
-from query.select import Select
+from query.read import Select
 from query.create import Create
+from query.delete import Delete
 
-data = {'name':'Malvadão','raca':'pintcher','idade':'18'}
-insert = Create('pets',data).get()
+delete = Delete('pets','idPet',7).get()
+
+# data = {'name':'teste','raca':'teste','idade':'5'}
+# insert = Create('pets',data).get()
 
 
 
